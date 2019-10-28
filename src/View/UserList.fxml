@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="487.0" prefWidth="253.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controller.UserListController">
+   <children>
+      <TableView id="userTable" fx:id="userTable" layoutX="11.0" layoutY="270.0" prefHeight="166.0" prefWidth="225.0">
+        <columns>
+            <TableColumn id="userNameCol" fx:id="userNameCol" editable="false" minWidth="0.0" prefWidth="149.0" text="Username" />
+            <TableColumn id="activeCol" fx:id="activeCol" editable="false" prefWidth="73.0" text="Active" />
+        </columns>
+      </TableView>
+      <Button id="newUsrBtn" layoutX="129.0" layoutY="198.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="106.0" text="Add New User" />
+      <Button id="exitBtn" cancelButton="true" layoutX="172.0" layoutY="445.0" mnemonicParsing="false" onAction="#exitScreen" prefHeight="25.0" prefWidth="65.0" text="Exit" />
+      <Label layoutX="94.0" layoutY="14.0" text="Users">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button id="userSearchBtn" defaultButton="true" layoutX="8.0" layoutY="233.0" mnemonicParsing="false" onAction="#searchUser" text="Search Users" />
+      <TextField id="userSearchTextField" fx:id="userSearchTextField" layoutX="100.0" layoutY="233.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="11.0" layoutY="47.0" text="User Name" />
+      <Label layoutX="11.0" layoutY="94.0" text="Password" />
+      <Label layoutX="11.0" layoutY="141.0" text="Confirm Password" />
+      <PasswordField id="confirmPWordTextField" fx:id="confirmPWordTextField" layoutX="11.0" layoutY="158.0" prefHeight="25.0" prefWidth="225.0" />
+      <PasswordField id="pWordTextField" fx:id="pWordTextField" layoutX="11.0" layoutY="111.0" prefHeight="25.0" prefWidth="225.0" />
+      <TextField id="userNameTextField" fx:id="userNameTextField" layoutX="11.0" layoutY="64.0" prefHeight="25.0" prefWidth="225.0" />
+   </children>
+</AnchorPane>

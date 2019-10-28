@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="617.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerListController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="551.0" prefWidth="677.0">
+         <children>
+            <TableView id="customerTableView" fx:id="customerTableView" layoutX="18.0" layoutY="219.0" prefHeight="346.0" prefWidth="632.0">
+              <columns>
+                <TableColumn id="nameCol" fx:id="nameCol" editable="false" prefWidth="104.0" text="Name" />
+                  <TableColumn id="phoneCol" fx:id="phoneCol" editable="false" prefWidth="85.0" text="Phone" />
+                  <TableColumn id="addressCol" fx:id="addressCol" editable="false" prefWidth="198.0" text="Address" />
+                  <TableColumn id="zipCodeCol" fx:id="zipCodeCol" editable="false" prefWidth="71.0" text="ZipCode" />
+                  <TableColumn id="cityCol" fx:id="cityCol" editable="false" prefWidth="95.0" text="City" />
+                  <TableColumn id="countryCol" fx:id="countryCol" editable="false" prefWidth="78.0" text="Country" />
+              </columns>
+            </TableView>
+            <Button id="backBtn" layoutX="569.0" layoutY="578.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="57.0" text="Exit" />
+            <Button id="delCustomerBtn" layoutX="413.0" layoutY="578.0" mnemonicParsing="false" onAction="#removeCustomer" prefHeight="25.0" prefWidth="135.0" text="Delete Customer" />
+            <Button id="modCustomerBtn" layoutX="253.0" layoutY="578.0" mnemonicParsing="false" onAction="#modCustomer" prefHeight="25.0" prefWidth="135.0" text="Modify Customer" />
+            <Button id="addCustomerBtn" layoutX="530.0" layoutY="184.0" mnemonicParsing="false" onAction="#newCustomer" text="Add New Customer" />
+            <ComboBox id="cityComboBox" fx:id="cityComboBox" layoutX="444.0" layoutY="145.0" prefHeight="25.0" prefWidth="209.0" visibleRowCount="3" />
+            <Label layoutX="444.0" layoutY="119.0" text="City" />
+            <ComboBox id="countryComboBox" fx:id="countryComboBox" layoutX="230.0" layoutY="145.0" onAction="#enableCityBox" prefHeight="25.0" prefWidth="209.0" visibleRowCount="2" />
+            <Label layoutX="246.0" layoutY="119.0" text="Country" />
+            <TextField id="zipTextField" fx:id="zipTextField" layoutX="18.0" layoutY="145.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="18.0" layoutY="119.0" text="ZipCode" />
+            <TextField id="streetTextField" fx:id="streetTextField" layoutX="444.0" layoutY="78.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="442.0" layoutY="54.0" text="Street Address" />
+            <TextField id="phoneTextField" fx:id="phoneTextField" layoutX="230.0" layoutY="78.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="231.0" layoutY="57.0" text="Phone Number" />
+            <TextField id="nameTextField" fx:id="nameTextField" layoutX="18.0" layoutY="78.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="13.0" layoutY="57.0" text="Name" />
+            <Label layoutX="297.0" layoutY="14.0" text="Customers">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
